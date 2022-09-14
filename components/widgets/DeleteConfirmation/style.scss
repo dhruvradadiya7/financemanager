@@ -1,0 +1,49 @@
+.global-delete-pop_wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px $border-color;
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px;
+
+    h3{
+        margin: 0;
+        color: $color-primary;
+    }
+    p{
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .global-delete-pop_actions{
+        width: 100%;
+        margin-top: 20px;
+
+        button{
+            border: none;
+            box-shadow: 1px 1px 2px $border-color;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            &.cancel-btn{
+                background-color: $white;
+            }
+            &.delete-btn{
+                background-color: $color-error;
+                color: $white;
+            }
+            opacity: 0.85;
+            transition: all 0.4s ease;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

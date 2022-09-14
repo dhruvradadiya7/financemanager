@@ -1,0 +1,110 @@
+
+
+// Content Style
+.exe_main-content-box {
+    width: calc(100% - 400px);
+    padding: 50px 30px;
+    height: calc(100% - 100px);
+    max-height: calc(100% - 100px);
+    position: relative;
+    overflow-y: auto;
+
+    .exe_main-content_header {
+        width: 100%;
+        h3 {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 27px;
+            color: $color-primary;
+            margin: 0 0 0 20px;
+        }
+        .exe_main-content_header-actions {
+            margin-right: 20px;
+            .exe_main-content_header-action {
+                font-size: 16px;
+                line-height: 20px;
+                color: $color-text-secondary;
+                font-weight: bold;
+                margin: 0 10px;
+                span {
+                    color: $black;
+                    font-weight: 500;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .exe_main-content-btn {
+        border: none;
+        background-color: $color-primary;
+        p {
+            color: $white;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0;
+            display: flex;
+        }
+        .exe_main-content-btn-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            margin-left: -5px;
+        }
+        padding: 8px 14px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px $border-color;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-primary-darker;
+        }
+    }
+}
+
+
+// Table Style
+.exe_main-content_table {
+    width: calc(100% - 40px);
+    margin: 50px 20px 0 20px;
+
+    .exe_main-content_table-row-header {
+        width: calc(100% + 20px);
+        padding: 5px 10px;
+        margin-left: -10px;
+        background-color: transparent;
+        border-radius: 5px;
+        transition: all 0.4s ease;
+        position: relative;
+        margin-bottom: 10px;
+
+        .exe_main-content_table-col {
+            &.col-1 {
+                width: calc(calc(100% / 12) * 2);
+            }
+            &.col-2 {
+                width: calc(calc(100% / 12) * 4);
+            }
+            p {
+                margin: 0;
+                font-size: 16px;
+                font-weight: bold;
+                color: $color-text-secondary;
+            }
+        }
+    }
+}
+
+
+// Empty Record
+.exe_main-content_empty{
+    width: 100%;
+    margin-top: 50px;
+
+    h3{
+        font-size: 18px;
+        color: $color-text-secondary;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+}

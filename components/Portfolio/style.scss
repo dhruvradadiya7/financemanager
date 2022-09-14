@@ -1,0 +1,307 @@
+// Content Style
+.portfolio_main-content-box {
+    width: calc(100% - 50px);
+    padding: 50px 30px;
+    height: calc(100% - 100px);
+    max-height: calc(100% - 100px);
+    position: relative;
+    overflow-y: auto;
+
+    .portfolio_main-content_header {
+        width: 100%;
+        h3 {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 27px;
+            color: $color-primary;
+            margin: 0;
+        }
+        .portfolio_main-content_header-actions {
+            .portfolio_main-content_header-action {
+                font-size: 16px;
+                line-height: 20px;
+                color: $color-text-secondary;
+                font-weight: bold;
+                span {
+                    color: $black;
+                    font-weight: 500;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .portfolio_main-content-btn {
+        border: none;
+        background-color: $color-primary;
+        p {
+            color: $white;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .portfolio_main-content-btn-icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+        }
+        padding: 8px 14px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px $border-color;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-primary-darker;
+        }
+    }
+}
+
+// Most active stocks
+.portfolio_active-stocks_wrapper {
+    width: 100%;
+    margin: 15px 0;
+    .portfolio_active-stock-card-wrapper {
+        width: 100%;
+    }
+    .portfolio_active-stock-card {
+        width: 100%;
+        background-color: $card-back;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 8px 0;
+        transition: all ease 0.5s;
+    }
+    .portfolio_active-stock-ticker {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+        font-weight: 900;
+        color: $color-primary;
+        text-transform: uppercase;
+    }
+    .portfolio_active-stock-company-name {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        color: $border-color;
+        text-transform: capitalize;
+    }
+    .portfolio_active-stock-price {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 900;
+        margin: 0 15px 0 0;
+        color: $color-primary;
+    }
+    .portfolio_active-stock-change-box {
+        width: 80px;
+    }
+    .portfolio_active-stock-change {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        font-weight: 700;
+    }
+    .portfolio_active-stock-change-pr {
+        font-size: 11px;
+        line-height: 12px;
+        margin: 0;
+        color: $border-color;
+
+        &.gained {
+            color: $color-success;
+        }
+        &.lost {
+            color: $color-error;
+        }
+    }
+
+    .portfolio_active-stock-add {
+        width: 0;
+        background-color: $card-back;
+        border-radius: 5px;
+        display: none;
+        border: none;
+        transition: all ease 0.4s;
+        flex: 1;
+        svg {
+            width: 22px;
+            color: $color-primary;
+        }
+        &:hover {
+            background-color: $border-color;
+        }
+        &.edit svg{
+            margin: 5px;
+            width: 14px;
+        }
+    }
+
+    .portfolio_active-stock-card-wrapper {
+        position: relative;
+        align-items: stretch !important;
+        &:hover, &.edit {
+            .portfolio_active-stock-card {
+                width: calc(100% - 60px);
+                transition: all ease 0.5s;
+            }
+            .portfolio_active-stock-add {
+                display: flex;
+                width: 50px;
+                margin: 8px 0 8px 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Search input box
+.portfolio_main-content_search-box {
+    position: relative;
+    .portfolio_main-content_search-icon {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        color: $color-text-primary;
+        opacity: 0.8;
+    }
+}
+.portfolio_main-content_search-input {
+    width: 250px;
+    padding: 8px 10px 8px 35px;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: $card-back;
+    border-radius: 5px;
+    color: $color-text-primary;
+    border: none;
+}
+
+.portfolio_main-content-search-result {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    z-index: 4;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px $border-color;
+    .portfolio_main-content-search-result-btn {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        border: none;
+        font-size: 14px;
+        color: $border-color;
+        font-weight: 700;
+        background-color: $card-back;
+        transition: all ease 0.4s;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+// Shares picker styles
+.shares-picker_container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    .shares-picker_form {
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px $border-color;
+        width: 550px;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 20px;
+        position: relative;
+
+        h2 {
+            margin: 0;
+            color: $color-primary;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .input-box {
+            margin-bottom: 0;
+            input {
+                height: 45px;
+                font-size: 18px;
+            }
+            .title {
+                left: 25px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .shares-picker_icon {
+        color: $color-text-secondary;
+        width: 18px;
+        margin: 0 15px;
+    }
+
+    .shares-picker_close-icon {
+        height: 26px;
+        width: 26px;
+        padding: 0;
+        border-radius: 50%;
+        margin-left: 10px;
+        background-color: $white;
+        color: $color-primary;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        .icon {
+            margin: 0;
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    // Actions
+    .shares-picker_actions {
+        .shares-picker_action-btn {
+            border: none;
+            background-color: $color-primary;
+            padding: 5px 12px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 4px $border-color;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            margin: 15px 0 0 10px;
+            &.close{
+                background-color: $border-color;
+            }
+            &.submit{
+                background-color: $color-success;
+            }
+            &:hover {
+                background-color: $color-primary-darker;
+            }
+            p{
+                color: $white;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+                display: flex;
+            }
+            .shares-picker_action-btn-icon {
+                width: 16px;
+                color: $white;
+                height: 14px;
+                margin-right: 5px;
+                margin-left: -5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.button{
+    color: $color-primary; //an global variable example of usage 
+    overflow: scroll;
+    @include hideScroller(); //an global mixin example of usage 
+}
+.active{
+    background: red;
+}
